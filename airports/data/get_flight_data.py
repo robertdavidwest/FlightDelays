@@ -1,9 +1,9 @@
 import requests, zipfile, StringIO
+from airports.config import output_dir
 
 # download and unzip all flight data from 1987 through 2015 and save in 
 # outputdir
-output_dir = 
-years = xrange(1987, 2015 + 1)
+years = [2013, 2014]  # xrange(1987, 2015 + 1)
 months = xrange(1, 12 + 1)
 for y in years:
     for m in months:
@@ -13,3 +13,6 @@ for y in years:
         if r.status_code == 200:
             z = zipfile.ZipFile(StringIO.StringIO(r.content))
             z.extractall(path=output_dir)
+            print 'downloaded {}-{} successfully'.format(y, m)
+        else:
+            print 'could not download {}-{}'.format(y, m)
