@@ -19,13 +19,24 @@ def get_hour(s):
     return hour
 
 
-def show_stats(report, accuracy_score):
+def show_stats(report, accuracy_score, suppress_print=False):
     """Print precision, recall, F1 and accuracy"""
+    if not suppress_print:
+        print 'Precision: {:.2f}'.format(report[0])
+        print 'Recall: {:.2f}'.format(report[1])
+        print 'F1: {:.2f}'.format(report[2])
+        print 'Accuracy: {:.2f}'.format(accuracy_score)
 
-    print 'Precision: {:.2f}'.format(report[0])
-    print 'Recall: {:.2f}'.format(report[1])
-    print 'F1: {:.2f}'.format(report[2])
-    print 'Accuracy: {:.2f}'.format(accuracy_score)
+    stats = pd.DataFrame({'value': [report[0],
+                                   report[1],
+                                   report[2],
+                                   accuracy_score]},
+                         index=['Precision',
+                               'Recall',
+                               'F1',
+                               'Accuracy'])
+    return stats
+
 
 
 def fix_for_hdf(df):
