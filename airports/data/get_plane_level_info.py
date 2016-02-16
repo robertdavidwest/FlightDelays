@@ -11,11 +11,8 @@ def convert_tbl_to_df(tbl):
     tbl_pt1 = tbl.iloc[:, 0:2]
     tbl_pt1.columns = ['key', 'value']
     tbl_pt2 = tbl.iloc[:, 2:4]
-    try:
-        tbl_pt2.columns = ['key', 'value']
-    except ValueError:
-        'up here'
-        import ipdb; ipdb.set_trace()
+    tbl_pt2.columns = ['key', 'value']
+    
     df = tbl_pt1.append(tbl_pt2)
     df = df.dropna(how='any')
     df.index = df['key']
@@ -90,4 +87,4 @@ if __name__ == '__main__':
                  complevel=9, complib='blosc')
 
     # back up csv
-    all_plane_info.to_csv(output_dir + 'plane_info.csv')
+    all_plane_info.to_csv(output_dir + 'plane_info.csv', index=False)
