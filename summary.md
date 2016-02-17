@@ -2,8 +2,8 @@
 
 I set out to take data on obsereved historical flights and create a model that successfully predicts flight delays, using Python's Sci-Kit library. To create a predictive model and to understand the contributing factors to the model.
 
-* To see the more detailed analysis see [here](https://github.com/robertdavidwest/airports/blob/master/airports/analysis/run_model.ipynb)
-* and for all code used to obtain, aggregate and clean data see [here](https://github.com/robertdavidwest/airports)
+* [ipython notebook](https://github.com/robertdavidwest/FlightDelays/blob/master/FlightDelays/analysis/run_model.ipynb)
+* [Github repo](https://github.com/robertdavidwest/FlightDelays)
 
 ## Data Sources
 
@@ -42,15 +42,12 @@ Using 2013 data to train this model, the following represents the model's perfor
 * The model performed similarly across the 5 airports with the best predictive power seen at JFK
 * Across all 5 airports the two most significant factors contributing to flight delays were 'Hour' the Hour in the day and 'AirTime' the total flight time. Both of which had a negative correlation with Delays. i.e. the later in the day you're flight is scheduled to leave and the longer your flight, the more likely a delay
 
-		show correlation matrix for JFK data of these two factors
-		show JFK hour histogram and AirTime
+		![hours.png](https://github.com/robertdavidwest/FlightDelays/blob/master/screenshots/hours.png)
 
 	NOTE: the hours between midnight and 3am were recoded as 24 to 27 respectively. 
 	
-* CHECK LOCATION OF ORIGIN WEATHERS VARS TO SEE IF THEY DIFFER BY AIRPORT
+* The Origin weather information was surprizingly consistent across all aiports despite the  different weather conditions seen in the different locations.
 * For all aiports but Atlanta, the third most significant factor was the temperature (daily high) at the destination airport. Interestingly Atlanta sees a boost in significance of the year of Manufacteur of the aircraft
-	
-	show year of manufacteura distribution across airports
 
 
 ## Model Results
@@ -76,7 +73,8 @@ Using 2013 data to train this model, the following represents the model's perfor
 	4. DestTMIN 0.07   DestTMIN   0.07   DestTMIN  0.07   DestTMIN 0.08  DestTMIN   0.06
 	5. DestTMAX 0.07   DayofMonth 0.07   Dest      0.06   Dest     0.07  OriginTMIN 0.05
 	
-## Details
+	
+## Details	
 
-* To see more detail on model selection see the [ipython notebook](https://github.com/robertdavidwest/airports/blob/master/airports/analysis/run_model.ipynb)
-* To see full details on the intermediate data gathering and manipulation work, see the github repo: [https://github.com/robertdavidwest/airports](https://github.com/robertdavidwest/airports)
+* To see more detail on model selection see the [ipython notebook](https://github.com/robertdavidwest/FlightDelays/blob/master/FlightDelays/analysis/run_model.ipynb)
+* To see full details on the intermediate data gathering and manipulation work, see the github repo: [https://github.com/robertdavidwest/FlightDelays](https://github.com/robertdavidwest/FlightDelays)

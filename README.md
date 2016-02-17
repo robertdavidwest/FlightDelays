@@ -1,4 +1,4 @@
-## Airports
+## FlightDelays
 
 An [sklearn](http://scikit-learn.org/stable/) model used to predict Flight Delays using data obtained from 3 different sources:
 
