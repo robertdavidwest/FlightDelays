@@ -2,9 +2,9 @@
 
 An [sklearn](http://scikit-learn.org/stable/) model used to predict Flight Delays using data obtained from 3 different sources:
 
-* Flight Data: **ADD FLIGHT DATA SITE HERE**
-* Weather Data **ADD FLIGHT DATA SITE HERE**
-* Aircraft data **ADD FLIGHT DATA SITE HERE**
+* Flight data from the [Bureal of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time)
+* Weather data from (http://www.ncdc.noaa.gov/cdo-web/datasets/)
+* Aircraft specific data from (http://registry.faa.gov/aircraftinquiry/NNum_Results.aspx?NNumbertxt=N325US)
 
 This module will instruct you on how to obtain, and combine all of the data above and then describe the process of predicting Flight Delays using a [RandomForestClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
