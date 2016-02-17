@@ -1,5 +1,5 @@
 import requests, zipfile, StringIO
-from airports.config import output_dir
+from FlightDelays.config import output_dir
 
 # download and unzip all flight data from 1987 through 2015 and save in 
 # outputdir

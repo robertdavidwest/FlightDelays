@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import flyingpandas as fp
-from airports.config import output_dir, hdf_path
-from airports.helpers import get_hour
+from FlightDelays.config import output_dir, hdf_path
+from FlightDelays.helpers import get_hour
 """
 Move the larger csvs to hdf5 with high compression to save disk space
 """

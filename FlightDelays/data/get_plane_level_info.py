@@ -1,6 +1,6 @@
 import pandas as pd
-from airports.config import hdf_path, output_dir
-from airports.helpers import fix_for_hdf
+from FlightDelays.config import hdf_path, output_dir
+from FlightDelays.helpers import fix_for_hdf
 
 url = lambda tailnum: 'http://registry.faa.gov/aircraftinquiry/NNum_Results.aspx?NNumbertxt={}'.format(tailnum)
 

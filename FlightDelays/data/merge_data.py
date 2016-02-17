@@ -2,8 +2,8 @@ from geopy.distance import vincenty
 import pandas as pd
 import numpy as np
 import flyingpandas as fp
-from airports.config import output_dir, hdf_path
-from airports.helpers import fix_for_hdf
+from FlightDelays.config import output_dir, hdf_path
+from FlightDelays.helpers import fix_for_hdf
 
 def show_dups(df, cols):
     """display duplicates rows"""
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     store = pd.HDFStore(hdf_path)
 
     # it takes a while to find the closest airport weather station <->
-    # to airports so ideally this will only be run once even if I need to
+    # to FlightDelays so ideally this will only be run once even if I need to
     # re-run other things in this script
 
     if airport_and_stations_from_csv:

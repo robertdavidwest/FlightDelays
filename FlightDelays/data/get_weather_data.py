@@ -1,5 +1,5 @@
 import gzip
-from airports.config import output_dir
+from FlightDelays.config import output_dir
 
 years = [2013, 2014]
 for y in years:
